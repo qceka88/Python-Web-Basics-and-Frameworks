@@ -1,6 +1,6 @@
 # Python Web Basics  & Python Web Framework
 
-This is my Python Web Basics module, programing with Python.
+This is my Python Web Basics & Web Framework module.
 
 [Python Web Basics Python - May2023](https://softuni.bg/trainings/4109/python-web-basics-may-2023)
 
