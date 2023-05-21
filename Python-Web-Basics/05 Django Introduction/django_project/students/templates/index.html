@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students App</title>
+</head>
+<body>
+
+<h1>Hello! This is students app!</h1>
+{% if students_list %}
+    {% for student in  students_list %}
+        <h3>{{ student }}</h3>
+
+    {% endfor %}
+{% else %}
+    <p>There are no student records!</p>
+{% endif %}
+</body>
+</html>
