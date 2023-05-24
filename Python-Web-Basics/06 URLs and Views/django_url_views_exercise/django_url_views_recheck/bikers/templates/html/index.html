@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>MCC"The Sea Dragons!</title>
+</head>
+
+<body>
+
+<style>
+    body {
+        background-image: url('{% static "images/2023_GSX-R1000RAM3_B5N_Studio_Hero_2500x1227.jpg" %}');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100%;
+        {#background-position-x: 1000px;#}
+        {#background-position-y: 150px;#}
+        background-repeat: no-repeat;
+    }
+    h1 {
+        font-size: 80px;
+    }
+</style>
+
+<h1> Bikers List! </h1>
+
+{% if bikers_list %}
+    {% for b in bikers_list %}
+        <h3 style="font-size: 45px">{{ b }}</h3>
+    {% endfor %}
+
+{% else %}
+    <h3>No bikers recorded!</h3>
+{% endif %}
+
+</body>
+</html>
+
+
