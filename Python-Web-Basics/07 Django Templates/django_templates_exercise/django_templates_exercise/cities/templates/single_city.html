@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ city.city_name }}</title>
+</head>
+
+
+<body>
+{#<img src="{{ city.city_image.url }}">#}
+
+<style>
+
+    body {
+        background-image: url("{{ city.city_image.url }}");
+        background-repeat: no-repeat;
+        background-size: 900px 600px;
+        background-position-x: 50%;
+        background-position-y: -20%;
+
+    }
+</style>
+<h1>{{ city }}</h1>
+
+{#<link rel="stylesheet" href="{% static 'CSS/no_city.css' %}">#}
+{##TODO: To check with filter for dynamic filling directory of CSS style and#}
+{% include 'footer.html' %}
+
+</body>
+</html>

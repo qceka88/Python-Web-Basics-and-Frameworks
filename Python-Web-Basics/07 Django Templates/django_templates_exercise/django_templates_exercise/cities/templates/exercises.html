@@ -1,0 +1,40 @@
+{% extends 'bulgaria.html' %}
+{% load filters %}
+{% load tags %}
+
+{% block odd_city_block %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>EXERCISES!</title>
+    </head>
+    <body>
+    <h3> Cities filter start with "S"! </h3>
+
+    {% for city in city_list|s_cities %}
+        <li style="font-size: 25px"><a href="{% url 'city by name' city_data=city.city_name %}">{{ city.city_name }}</a>
+        </li>
+    {% endfor %}
+
+    <h3> Cities filter start with "P"! </h3>
+
+    {% for city in city_list|p_cities %}
+        <li style="font-size: 25px"><a href="{% url 'city by name' city_data=city.city_name %}">{{ city.city_name }}</a>
+        </li>
+    {% endfor %}
+
+    <h3> Custom tag! </h3>
+
+    <ul class="list-group">
+        <p class="list-group-item">{% populations city_data=city_list %}</p>
+
+    </ul>
+
+
+    <p style="position: absolute; top: 85%; left: 5%; font-size: 35px"><a href="{% url 'all cities' %}">HOME SCREEN</a>
+    </p>
+
+    </body>
+    </html>
+{% endblock %}

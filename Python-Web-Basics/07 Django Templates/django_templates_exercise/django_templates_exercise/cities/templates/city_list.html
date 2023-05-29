@@ -1,0 +1,66 @@
+{% extends 'bulgaria.html' %}
+{% load filters %}
+{% block town_list %}
+
+    <head>
+        <meta charset="UTF-8">
+        <title>All cities!</title>
+    </head>
+    <h2 style="position: absolute; left: 37%;">Top 12 of Bulgarian cities!</h2>
+    <li style="position: absolute; top: 49%; left:28%; font-size: 25px; color: red;"><a {{ sofia.pk }}
+            href="{% url 'city by name' city_data=sofia.city_name %}">{{ sofia.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 70%; left: 42%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=plovdiv.city_name %}">{{ plovdiv.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 36%; left: 80%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=varna.city_name %}">{{ varna.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 57%; left: 75%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=burgas.city_name %}">{{ burgas.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 13%; left: 57%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=ruse.city_name %}">{{ ruse.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 62%; left: 55%; font-size: 25px; color: red;"><a
+            style="position: absolute; top: 65%; left: 55%; font-size: 25px;"
+            href="{% url 'city by name' city_data=starazagora.city_name %}">{{ starazagora.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 27%; left: 45%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=pleven.city_name %}">{{ pleven.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 51%; left: 63%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=sliven.city_name %}">{{ sliven.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 25%; left: 78%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=dobrich.city_name %}">{{ dobrich.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 36%; left: 70%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=shumen.city_name %}">{{ shumen.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 56%; left:24%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=pernik.city_name %}">{{ pernik.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 59%; left: 64%; font-size: 25px; color: red;"><a
+            href="{% url 'city by name' city_data=yambol.city_name %}">{{ yambol.city_name }}</a>
+    </li>
+
+    <li style="position: absolute; top: 3%; left: 1%; font-size: 20px; color: red;"><a
+            href="{% url 'no such city' %}"> CITY 404 </a>
+    </li>
+        <li style="position: absolute; top: 7%; left: 1%; font-size: 20px; color: red;"><a
+            href="{% url 'exercise' %}"> Exercises </a>
+    </li>
+
+{% endblock %}
