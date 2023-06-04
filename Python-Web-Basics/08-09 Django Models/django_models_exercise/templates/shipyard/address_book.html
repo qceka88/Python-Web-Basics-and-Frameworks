@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address BOOK!</title>
+</head>
+<body>
+
+
+<h1>Address list!</h1>
+{% for address in addresses %}
+    <li>{{ address }}</li>
+    <a href="{% url 'address details' slug=address.slug %}">Details about address!</a>
+
+{% endfor %}
+
+<h1><a href="{% url 'index' %}">RETURN TO MAIN MENU</a></h1>
+</body>
+</html>

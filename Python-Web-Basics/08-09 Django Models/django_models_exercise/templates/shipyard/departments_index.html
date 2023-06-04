@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for dep in departments %}
+    <li>
+        {{ dep }}
+        <a href="{% url 'department details' slug=dep.slug %}">details</a>
+    </li>
+
+{% endfor %}
+<h1><a href="{% url 'index' %}">RETURN TO MAIN MENU</a></h1>
+</body>
+</html>

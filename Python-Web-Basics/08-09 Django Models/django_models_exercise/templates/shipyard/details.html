@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+{{ worker }} {{ worker.experience }} {{ worker.birth_date }}
+<hr>
+address:
+{{ worker.address }}
+<hr>
+project:
+{{ worker.working_project.get }}
+<hr>
+<a href="{% url 'delete worker' pk=worker.pk %}">delete worker</a>
+
+<hr>
+<h1><a href="{% url 'index' %}">RETURN TO MAIN MENU</a></h1>
+</body>
+</html>

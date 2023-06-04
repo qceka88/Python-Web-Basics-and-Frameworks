@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for worker in workers %}
+    <li>
+        {{ worker }}
+        <a href="{% url 'view details' pk=worker.pk %}">Details</a>
+        <a href="{% url 'delete worker' pk=worker.pk %}">delete worker</a>
+    </li>
+{% endfor %}
+
+<hr>
+<h2> young workers</h2>
+{% for worker in workers2 %}
+    <li>
+        {{ worker }}
+    </li>
+{% endfor %}
+
+<hr>
+<h2> old workers</h2>
+{% for worker in workers3 %}
+    <li>
+        {{ worker }}
+    </li>
+{% endfor %}
+
+</body>
+</html>
+
+<hr>
+<a href="{% url 'index' %}">INDEX VIEW</a>
+<hr>
+<a href="{% url 'departments' %}">DEPARTMENTS VIEW</a>
+<hr>
+<a href="{% url 'addresses' %}">ADDRESS BOOK</a>
