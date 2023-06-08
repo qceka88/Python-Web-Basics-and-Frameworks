@@ -56,7 +56,7 @@ The template is a base for all the templates in the project. It consists of the 
 Keep in mind that the "Create Album" and the "Profile" buttons on the navigation bar are only visible when the user has a profile.
 There is no path to this template, and it is NOT accessible via URL:
 
-![img.png](/readme_images/img.png)
+![img.png](readme_images/img.png)
 
 
 Home Page - 22p
@@ -72,12 +72,12 @@ o	There must be a placeholder "Age".
 o	When you click on it, if the profile is successfully created, you should be redirected to the same page, showing a template for a home page with a profile.
 o	Otherwise, the form should show the appropriate validation errors.
 
-![img_1.png](/readme_images/img_1.png)
+![img_1.png](readme_images/img_1.png)
 
 The home with a profile page shows all albums created by the user. When there are no albums created, you can only see the paragraph "No Albums in Catalog!":
 
 
-![img_2.png](/readme_images/img_2.png)
+![img_2.png](readme_images/img_2.png)
 
 If there are a profile and album/s, the page should have the following:
 •	A navigation bar, as shown bellow.
@@ -85,7 +85,7 @@ If there are a profile and album/s, the page should have the following:
 •	A card-box for each album, showing the album's image, name, artist, genre, and price (formatted to the second decimal place). There should be a button "Details" in each card-box leading to the album details page for the selected album.
 
 
-![img_3.png](/readme_images/img_3.png)
+![img_3.png](readme_images/img_3.png)
 
 
 Add Album Page - 15p
@@ -108,7 +108,7 @@ o	When you click on it, if the album is successfully created, you should be redi
 o	Otherwise, the form should show the appropriate validation errors.
 
 
-![img_4.png](/readme_images/img_4.png)
+![img_4.png](readme_images/img_4.png)
 
 Album Details Page - 10p
 Template file: "album-details.html"
@@ -123,7 +123,7 @@ This page contains an album's data. It should have the following:
 •	A "Delete" button that leads to the delete album page
 
 
-![img_5.png](/readme_images/img_5.png)
+![img_5.png](readme_images/img_5.png)
 
 
 Edit Album Page - 10p
@@ -135,7 +135,7 @@ When you click on the "Edit Album" button:
 •	Otherwise, the form should show the appropriate validation errors.
 
 
-![img_6.png](/readme_images/img_6.png)
+![img_6.png](readme_images/img_6.png)
 
 Delete Album Page - 10p
 Template file: "delete-album.html"
@@ -143,7 +143,7 @@ On the page, the form must be filled with the album's data, and the fields shoul
 The deleted album should be no longer visible in the app.
 
 
-![img_7.png](/readme_images/img_7.png)
+![img_7.png](readme_images/img_7.png)
 
 Profile Details Page - 10p
 Template file: "profile-details.html"
@@ -155,7 +155,7 @@ This page contains the user's data. It should have the following:
 •	The total number of albums existing at the moment in this app
 •	A "Delete" button that leads to the delete profile page
 
-![img_8.png](/readme_images/img_8.png)
+![img_8.png](readme_images/img_8.png)
 
 Delete Profile Page - 15p
 Template file: "profile-delete.html"
