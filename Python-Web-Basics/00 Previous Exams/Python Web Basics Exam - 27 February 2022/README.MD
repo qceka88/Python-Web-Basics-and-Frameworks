@@ -161,5 +161,5 @@ Delete Profile Page - 15p
 Template file: "profile-delete.html"
 Deleting a profile should delete the profile info and all albums. After deletion, the user should be redirected to the home page with no profile.
 
-![img_9.png](/readme_images/img_9.png)
+![img_9.png](readme_images/img_9.png)
 
