@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block page_content %}
+    <!-- edit game form -->
+    <section id="delete-page" class="auth">
+        <form id="delete" method="post" action="{% url 'car delete page' pk=car.pk %}">
+            <div class="container">
+
+                <h1>Delete Car</h1>
+
+                {{ form }}
+                <input class="btn submit" type="submit" value="Delete Car">
+                {% csrf_token %}
+
+            </div>
+        </form>
+    </section>
+{% endblock %}
