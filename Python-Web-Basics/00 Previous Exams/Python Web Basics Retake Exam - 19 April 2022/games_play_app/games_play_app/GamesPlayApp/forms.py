@@ -11,7 +11,12 @@ class BaseProfileForm(forms.ModelForm):
 
 
 class CreateProfileForm(BaseProfileForm):
-    ...
+    class Meta:
+        model = Profile
+        fields = ['email', 'age', 'password']
+        widgets = {
+            'password': forms.PasswordInput(),
+        }
 
 
 class EditProfileForm(BaseProfileForm):
