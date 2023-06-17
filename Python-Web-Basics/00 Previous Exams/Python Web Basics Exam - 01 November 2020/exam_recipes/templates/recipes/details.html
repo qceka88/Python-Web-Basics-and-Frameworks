@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_content %}
+    <div class="container">
+
+        <h1>Recipe Details</h1>
+        <div class="items-container">
+            <div class="item">
+                <h2>{{ recipe.title }}</h2>
+                <img class="detail-img" src="{{ recipe.image_url }}" alt="{{ recipe.title }}">
+                <div class="time">
+                    <img src="{% static '/images/clock.png' %}">
+                    <p>{{ recipe.recipe_time }}min</p>
+                </div>
+                <h3>Ingredients</h3>
+                <ul>
+                    {% for element in ingredients %}
+                        <li>{{ element }}</li>
+                    {% endfor %}
+
+
+                </ul>
+                <h3>How to prepare?</h3>
+                <div class="recipe-info-full">
+                    {{ recipe.description }}
+                </div>
+                <div class="buttons-container">
+                    <a class="button edit" href="{% url 'edit recipe' pk=recipe.pk %}">Edit</a>
+                    <a class="button delete" href="{% url 'delete recipe' pk=recipe.pk %}">Delete</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
