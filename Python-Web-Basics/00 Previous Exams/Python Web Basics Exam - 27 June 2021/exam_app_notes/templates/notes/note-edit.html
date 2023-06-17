@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+    <div class="body">
+        <!--headings-->
+        <h1>Edit Note</h1>
+        <!--headings-->
+
+        <!--note edit data form-->
+        <div class="form">
+            <form method="POST" action="{% url 'edit note page' pk=note.pk %}">
+                {{ form }}
+                {% csrf_token %}
+
+                <input type="submit" value="Edit"/>
+            </form>
+        </div>
+        <!--end note edit data form-->
+    </div>
+
+{% endblock %}

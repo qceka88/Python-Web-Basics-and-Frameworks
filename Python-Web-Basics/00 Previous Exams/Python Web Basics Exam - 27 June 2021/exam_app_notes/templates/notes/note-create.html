@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block page_content %}
+
+    <div class="body">
+        <!--headings-->
+        <h1>Add Note</h1>
+        <!--headings-->
+
+        <!--note data form-->
+        <div class="form">
+            <form method="POST" action="{% url 'add note page' %}">
+                {{ form }}
+                {% csrf_token %}
+                <input type="submit" value="Publish"/>
+            </form>
+        </div>
+        <!--end note data form-->
+    </div>
+{% endblock %}
