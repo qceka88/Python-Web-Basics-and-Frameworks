@@ -27,6 +27,13 @@ class EditProfileForm(BaseProfileForm):
             'last_name': 'Last Name',
             'profile_picture': 'Profile Picture',
         }
+        widgets = {
+            'password': forms.TextInput(
+                attrs={
+                    'type': 'password'
+                }
+            )
+        }
 
 
 class DeleteProfileForm(BaseProfileForm):
