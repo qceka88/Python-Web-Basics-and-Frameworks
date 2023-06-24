@@ -85,7 +85,7 @@ class CreateFruitForm(BaseFruitForm):
             'nutrition': '',
         }
         widgets = {
-            'name': forms.Te(
+            'name': forms.TextInput(
                 attrs={'placeholder': 'Fruit Name'}
             ),
             'image_url': forms.TextInput(
