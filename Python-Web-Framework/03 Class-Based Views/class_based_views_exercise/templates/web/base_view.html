@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Bikes from Index View!!!</h1>
+    <ul>
+        {% for bike in bikes_list %}
+            <li>
+                {{ bike }}
+                <a href="{% url 'details view' pk=bike.pk %}">-:View Details:- </a>
+                <a href="{% url 'update view' pk=bike.pk %}">-:Update Details:- </a>
+                <a href="{% url 'delete view' pk=bike.pk %}">-:Delete Bike!:- </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

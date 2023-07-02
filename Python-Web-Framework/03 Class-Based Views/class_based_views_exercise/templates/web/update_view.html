@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Update view!!!</h1>
+
+    <form action="{% url 'update view' pk=object.pk %}" method="post">
+        {{ form.as_ul }}
+        <button>Update details!</button>
+        {% csrf_token %}
+    </form>
+
+{% endblock %}

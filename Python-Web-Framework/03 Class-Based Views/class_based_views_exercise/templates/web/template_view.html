@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>This is template view!</h1>
+    <ul>
+        {% for bike in bikes_list %}
+            <li>{{ bike }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

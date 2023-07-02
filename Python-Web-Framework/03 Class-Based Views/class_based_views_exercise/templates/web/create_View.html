@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Create new bike view!</h1>
+
+    <form method="post" action="{% url 'create view' %}">
+
+        {{ form.as_p }}
+        {% csrf_token %}
+
+        <button> Create new bike!</button>
+    </form>
+
+{% endblock %}

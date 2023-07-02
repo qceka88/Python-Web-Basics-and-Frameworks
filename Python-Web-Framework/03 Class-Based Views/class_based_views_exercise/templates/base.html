@@ -1,0 +1,26 @@
+<a href="{% url  'base view' %}">HOME PAGE!</a>
+<body
+        style="background-image: url('https://www.codercrunch.com/content/email/template/images/programming-exercises.jpg');
+        background-repeat: no-repeat;
+        background-position-x: 80%;
+        background-position-y: 50%;
+
+">
+<h1 style="text-align: center ;"> Class based views - Exercise!</h1>
+{% block content %}
+
+
+{% endblock %}
+</body>
+
+<footer>
+
+
+    <a href="{% url  'template view' %}">Template View!</a>
+
+    <a href="{% url  'redirect view' %}">Redirect View!</a>
+
+    <a href="{% url  'list view' %}">List View!</a>
+
+    <a href="{% url  'create view' %}">Create View!</a>
+</footer>

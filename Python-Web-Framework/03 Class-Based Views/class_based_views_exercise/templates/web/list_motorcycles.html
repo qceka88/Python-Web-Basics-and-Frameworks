@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Bikes from List View!!!</h1>
+    <ul>
+        {% for bike in object_list %}
+            <li>
+                {{ bike.pk }}:
+                {{ bike }}
+                <a href="{% url 'details view' pk=bike.pk %}">-->bike details!</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
+    {% else %}
+        <a>&lt;</a>
+    {% endif %}
+
+    {{ page_obj.number }} / {{ paginator.num_pages }}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>
+    {% else %}
+        <a>&gt;</a>
+    {% endif %}
+{% endblock %}
