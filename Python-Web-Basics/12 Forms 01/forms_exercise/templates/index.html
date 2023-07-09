@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <style>
+        form .helptext {
+            color: green;
+        }
+    </style>
+
+
+</head>
+<body>
+{% if name %}
+    <h1>Hello {{ name }}!</h1>
+{% else %}
+    <h1> Please enter your name</h1>
+{% endif %}
+
+<p>CSRF TOKE: {{ csrf_token }}</p>
+
+<form method="post" action="{% url 'index' %}">
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+    {#    <input type="submit" value="Submit form">#}
+    {% csrf_token %}
+</form>
+
+<div>
+
+    {% for person in people %}
+        <p>{{ person.name }}</p>
+
+    {% endfor %}
+</div>
+</body>
+
+
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block page_content %}
+    <form method="post" action="{% url 'form index view' %}">
+        <p>
+            {{ csrf_token }}
+        </p>
+        <h1>Form Data</h1>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button>SAVE</button>
+    </form>
+{% endblock %}
