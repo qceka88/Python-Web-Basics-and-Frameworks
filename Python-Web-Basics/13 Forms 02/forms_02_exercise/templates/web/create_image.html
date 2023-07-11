@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{% url 'create-image' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit to create image object">
+</form>
+
+<div>
+    <h2>Image objects</h2>
+    {% for image_object in images %}
+        <div>
+            <img style="width: 250px"  src="{{ image_object.image.url }}" alt="image">
+            <p> {{ image_object.description }}</p>
+
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
