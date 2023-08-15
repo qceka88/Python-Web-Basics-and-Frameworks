@@ -11,6 +11,14 @@ This is a part from my education in [SoftUni](https://softuni.bg/).
 <img alt='Image' width="300px" src="https://softuni.bg/Content/images/open-graph/university-default-og.png"/>
 
 
+Result of exam for Web Basics:
+![img_1.png](img_1.png)
+
+
+Result of Project Deffense  for Python Web Framework:
+![img.png](img.png)
+
+
 Every code in this folder is free for everyone to use it!
 
 
