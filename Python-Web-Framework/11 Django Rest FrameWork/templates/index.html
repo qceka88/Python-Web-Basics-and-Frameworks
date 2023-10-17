@@ -1,0 +1,33 @@
+<h1>work</h1>
+
+<script>
+    window.URLS = {
+        authors: '{% url "api list authors" %}'
+    }
+</script>
+<div id="authors">
+    Loading...
+</div>
+
+<script>
+    async function reloadAuthors() {
+        // AJAX call
+        const response = await fetch(window.URLS.authors);
+        const {results} = await response.json();
+
+        const ul = document.createElement('ol');
+
+        for (const author of results) {
+            const listItem = document.createElement('li');
+            listItem.innerText = `${author.first_name} ${author.last_name}`
+            ul.appendChild(listItem);
+        }
+
+        const authorsRoot = document.getElementById('authors');
+
+        authorsRoot.innerHTML = '';
+        authorsRoot.appendChild(ul);
+    }
+
+    reloadAuthors()
+</script>

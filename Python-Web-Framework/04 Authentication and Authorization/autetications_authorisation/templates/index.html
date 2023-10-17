@@ -1,0 +1,7 @@
+<a href="{% url 'login' %}">Login!</a>
+<a href="{% url 'logout' %}">Logout!</a>
+<h1>IT work!</h1>
+{{ csrf_token }}
+<h2>{{ user }}</h2>
+<h2>{{ user.is_authenticated }}</h2>
+<h2>{{ permission }}</h2>
